@@ -18,6 +18,7 @@ if(prod.length==0){
     nav("/")
     return
 }
+toast.success("Data Found")
 setproducts(prod)
 
 console.log(prod)
@@ -38,7 +39,7 @@ function homeF(){
       <div className="flex gap-2 w-[40vw] items-center justify-center ">
         <input
           type="search"
-          placeholder="Search here..."
+          placeholder="electronics,jewelery,men's clothing,women's clothing"
           className="flex outline-none border-2 py-1 px-1 rounded-md hover:border-purple-400 md:px-2 "
         value={val}
         onChange={updateVal}
