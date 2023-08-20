@@ -4,15 +4,21 @@ import { useContext } from "react";
 import userContext from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import Darkmodee from "./Darkmode";
+import { toast } from "react-hot-toast";
 
 const Navbar = () => {
   let nav=useNavigate()
   let {setproducts,cart}=useContext(userContext)
     let [val,setval]=useState("")
 async function findData(){
-let res=await fetch(`https://dummyjson.com/products/search?q=${val}`)
+let res=await fetch(`https://fakestoreapi.com/products/category/${val}`)
 let prod=await res.json()
-setproducts(prod.products)
+if(prod.length==0){
+   toast.error("Data not Found")
+    nav("/")
+    return
+}
+setproducts(prod)
 
 console.log(prod)
 }

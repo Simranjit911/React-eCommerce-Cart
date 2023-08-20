@@ -15,7 +15,7 @@ const {cart,cal,remove}=useContext(userContext)
               <div className="flex flex-col mx-auto  w-[80vw] lg:w-[20vw] bg-gray-300 text-left shadow-2xl rounded-lg overflow-hidden min-h-full justify-between">
               <div className="max-h-45 min-h-full ">
                     <img
-                      src={prod.images[0]}
+                      src={prod.image}
                       alt=""
                       className=" rounded-lg rounded-bl-none rounded-br-none hover:scale-105 ease-out duration-100 max-h-48 flex  mx-auto z-0"
                     />
