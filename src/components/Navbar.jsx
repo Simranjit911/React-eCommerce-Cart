@@ -24,7 +24,9 @@ setproducts(prod)
 console.log(prod)
 }
 function updateVal(e){
-setval(e.target.value)
+  let val=e.target.value
+  val=val.toLowerCase()
+setval(val.trim())
 
 }
 function homeF(){
